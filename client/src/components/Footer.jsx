@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import useReveal from '../hooks/useReveal'
 import { useCms } from '../cms/store'
 
@@ -266,6 +267,28 @@ export default function Footer() {
         <div className="font-label" style={{ color: 'rgba(255,255,255,.20)', letterSpacing: '.1em' }}>
           {contact.locations.join(' · ')}
         </div>
+        <Link
+          to="/dashboard"
+          className="font-label"
+          style={{
+            letterSpacing: '.16em',
+            textTransform: 'uppercase',
+            color: 'rgba(255,255,255,.26)',
+            border: '1px solid rgba(255,255,255,.15)',
+            padding: '8px 14px',
+            transition: 'color 300ms ease, border-color 300ms ease',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = 'rgba(255,255,255,0.9)'
+            e.currentTarget.style.borderColor = 'rgba(255,255,255,.4)'
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = 'rgba(255,255,255,.26)'
+            e.currentTarget.style.borderColor = 'rgba(255,255,255,.15)'
+          }}
+        >
+          Dashboard (Demo)
+        </Link>
       </div>
     </footer>
   )

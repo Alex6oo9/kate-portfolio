@@ -25,12 +25,12 @@ const DASH_CSS = `
   @keyframes cmsRowIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
   @media(max-width:1024px){#cms-sidebar{width:200px !important;flex-basis:200px !important}#cms-main{padding:28px 26px !important}}
   @media(max-width:760px){
-    #cms-root{flex-direction:column !important}
+    #cms-root{flex-direction:column !important;height:auto !important;min-height:100dvh !important;overflow:visible !important}
     #cms-sidebar{width:100% !important;flex-basis:auto !important;height:auto !important;position:relative !important}
     #cms-nav{flex-direction:row !important;overflow-x:auto;gap:4px !important}
     #cms-nav button{flex:0 0 auto !important;white-space:nowrap}
     #cms-side-foot{display:none !important}
-    #cms-main{padding:24px 18px !important}
+    #cms-main{padding:24px 18px !important;overflow-y:visible !important;height:auto !important}
   }
 `
 

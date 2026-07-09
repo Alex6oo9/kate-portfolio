@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useCms } from '../cms/store'
 import { COLL_BACKGROUNDS, DEFAULT_BG, collectionToLook } from './lookData'
 
@@ -410,8 +410,8 @@ export function GalleryViewer({ look, idx, onClose, onNav, onJump, viewAllHref }
         </div>
 
         {viewAllHref && (
-          <a
-            href={viewAllHref}
+          <Link
+            to={viewAllHref}
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '9px',
@@ -437,7 +437,7 @@ export function GalleryViewer({ look, idx, onClose, onNav, onJump, viewAllHref }
               <line x1="1" y1="5" x2="12" y2="5" stroke="currentColor" strokeWidth="1" />
               <polyline points="7,1 12,5 7,9" stroke="currentColor" strokeWidth="1" fill="none" />
             </svg>
-          </a>
+          </Link>
         )}
       </div>
     </div>
